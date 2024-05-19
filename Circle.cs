@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace MindboxTask
 {
-    internal class Circle
+    /*
+     Класс отвечающий за круг
+    */
+    internal class Circle : IFigure
     {
+        private double _radius;
+
+        public Circle(double radius)
+        {
+            _radius = radius;
+        }
+
+        public double GetSquare()
+        {
+            return Math.PI * Math.Pow(_radius, 2);
+        }
     }
 }
